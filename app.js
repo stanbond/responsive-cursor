@@ -39,33 +39,22 @@ function Ball(x, y, dx, dy, radius){
 var ballArray = [];
 
 for (var i = 0; i < 100; i++) {
-  var x = Math.random() * innerWidth;
-  var y = Math.random() * innerHeight;
-  var dx = (Math.random() - 0.5) * 8;
-  var dy = (Math.random() - 0.5) * 8;
   var radius = 30;
+  var x = Math.random() * (innerWidth - radius * 2) + radius;
+  var y = Math.random() * (innerHeight - radius * 2) + radius;
+  var dx = (Math.random() - 0.5) * 10;
+  var dy = (Math.random() - 0.5) * 10;
   ballArray.push(new Ball(x,y,dx,dy,radius))
 }
 function animate() {
   requestAnimationFrame(animate);
   canvas.clearRect(0,0, innerWidth, innerHeight);
   
-  ball.update();
-  
-  // canvas.beginPath();
-  // canvas.arc(x, y, radius, 0, Math.PI * 2, false);
-  // canvas.strokeStyle = 'blue';
-  // canvas.stroke();
+  // ball.update();
 
-  // if (x + radius > innerWidth || x - radius < 0 ) {
-  //   dx = -dx;
-  // }
-
-  // if ( y + radius > innerHeight || y - radius < 0 ) {
-  //   dy = -dy;
-  // }
-  // x += dx
-  // y += dy
+  for (var i = 0; i < ballArray.length; i++) {
+    ballArray[i].update();
+  }
 }
 
 animate();
