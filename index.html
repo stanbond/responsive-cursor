@@ -13,14 +13,46 @@
 
     body {
       margin: 0;
-      background-color: #E0E0E0;
+      background-color: rgb(222, 224, 225);
+      font-family: 'Raleway', sans-serif;
     }
+    div {
+      float: right;
+      display: flex;
+      position: absolute;
+      margin-top: -90px;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2C3E50;
+      
+    }
+    h2 {
+      padding-right: 1em;
+      font-size: 20px;;
+    }
+    h2:hover, a:hover {
+      color: lightslategray;
+    }
+    a {
+        padding: 5px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
   </style>
 </head>
 
 <body>
-  <canvas id="canvas" width="400" height="400"></canvas>
-
+  <canvas id="canvas" width="400" height="400"> Get Chrome</canvas>
+  <div>
+    <!-- <h1>Responsive Backround</h1> -->
+    <br/>
+  <h2 className="name">Stan Bondarenko</h2>
+  <a href="https://github.com/stanbond/responsive-cursor">Github</a>
+  <br/>
+  <a href="https://www.linkedin.com/in/stanbondarenko/">LinkedIn</a>
+  </div>
   <script src="app.js"></script>
 </body>
 

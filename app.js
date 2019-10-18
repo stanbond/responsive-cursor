@@ -7,8 +7,13 @@ canv.height = window.innerHeight;
 
 var maxBallRadius = 40;
 var minBallRadius = 3;
-var maxSpeed = 3;
+var maxSpeed = 2;
 var balls = 1000;
+
+if (canv.width > 1000) {
+  var balls = 1800;
+  var maxBallRadius = 50;
+}
 
 var mouse = {
   x: undefined,
@@ -16,10 +21,11 @@ var mouse = {
 };
 
 var colorArray = [
-  '#F5F5F5',
-  '#9E9E9E',
-  '#F99D1C',
-  '#1A4D7F'
+  '#6DBCDB',
+  // '#D7DADB',
+  '#FC4349',
+  '#2C3E50',
+  '#FFFFFF'
 ];
 
 window.addEventListener('mousemove', function(event) {
@@ -88,6 +94,7 @@ function init() {
     var dx = (Math.random() - 0.5) * maxSpeed;
     var dy = (Math.random() - 0.5) * maxSpeed;
     ballArray.push(new Ball(x, y, dx, dy, radius));
+    // console.log("balls");
   }
 }
 
