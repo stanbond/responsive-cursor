@@ -10,7 +10,7 @@ var minBallRadius = 3;
 var maxSpeed = 2;
 var balls = 1000;
 
-if (canv.width > 1000) {
+if (canv.width > 1300) {
   var balls = 1800;
   var maxBallRadius = 50;
 }
@@ -31,6 +31,7 @@ var colorArray = [
 window.addEventListener('mousemove', function(event) {
   mouse.x = event.x;
   mouse.y = event.y;
+  console.log("hover")
 });
 
 window.addEventListener('resize', function() {
